@@ -1,0 +1,32 @@
+/* Google font cdn */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Asset Warna */
+:root{
+    --body-color: #E4E9F7;
+    --nav-color: #4070F4;
+    --side-nav: #010718;
+    --text-color: #FFF;
+    --search-bar: #F2F2F2;
+    --search-text: #010718;
+}
+
+
+
+.content-container>header{
+    text-align: center;
+}
+
+.cont-core{
+    display: flex;
+}
+
+.cont-item{
+    height: 200px;
+    width: 100%;
+    border: 1px solid;
+}
