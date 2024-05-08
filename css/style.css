@@ -2,7 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 * {
-
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .2s linear;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -14,6 +17,9 @@
     --text-color: #FFF;
     --search-bar: #F2F2F2;
     --search-text: #010718;
+    --container : #F0F8FF ;
+    --container-1 : #ffffff;
+    --title : #29323d;
 }
 
 
@@ -28,6 +34,7 @@ body.dark {
     --text-color: #CCC;
     --search-bar: #242526;
     --search-text: #010718;
+   
 }
 
 nav {
@@ -140,21 +147,55 @@ nav .nav-bar .logo a {
 }
 
 .cont-item {
-    height: 200px;
+    height: 400px;
     width: 100%;
     border: 1px solid;
     margin: 18px;
+}
+.cont-item>img{
+    max-width: 500px;
+    height: 200px;
+    width: 100%;
+    border: 1px solid;
+    margin: 18px
 }
 
 .cont-item {
     text-align: center;
 }
 
+
+#item-right{
+    background-color: var(--container); 
+    border: 0; 
+    border-radius: 8px;
+}
+
+
 .item-form {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-form>label{
+    display: flex;
+    align-items: center;
+    flex-direction: ;
 }
 
 .item-form>input {
+    padding: 20px;
+    height: 32px;
+    width: 50%;
+    margin-left: 8px;
+    border: 1px solid darkgrey;
+    border-radius: 4px;
+
+}
+.item-form>select {
     height: 32px;
     width: 50%;
     margin-left: 8px;
@@ -164,15 +205,124 @@ nav .nav-bar .logo a {
 }
 
 
+
+/* Our Service */
+
+.container{
+    min-height:120px ;
+    width: 100%;
+    background-color: var(--container);
+}
+
+.package-wrapper{
+    padding: 5% 8%;
+
+}
+
+.package{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.our-package{
+    color: var(--title);
+    font-size: 30px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: transparent;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+}
+
+.our-package:after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    height: 8px;
+    width: 80%;
+    border-radius: 8px;
+    border-color: rgba(225, 225, 225, a0.05);
+}
+
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Koreksi */
+.card{
+    height: 150px;
+    width: 370px;
+    background-color: var(--container-1);
+    padding: 3% 8%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.card i{
+    color: darkgray;
+}
+
+.card p{
+    font-weight: 100;
+    color: darkgrey;
+}
+.card h2{
+    color: var(--title);
+    font-size: 20px;
+}
+
+
+.btn-call{
+    text-align: center;
+}
+
+.container header{
+    text-align: center;
+}
+
+.desc{
+    text-align: center;
+    font-weight: 200;
+    color: darkgrey;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+
+.btn-call>button{
+    background-color: var(--side-nav);
+    color: var(--text-color);
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    width: 204px;
+    font-size: medium;
+    border-radius: 8px;
+}
+
+
 footer {
     position: relative;
-    max-width: 100rem;
-    padding-left: 16px;
-    padding-right: 16px;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
     background-color: var(--nav-color);
 }
 
 footer .foot-1 {
+    top: 0;
+    left: 0;
     position: relative;
     height: 100%;
     max-width: 1000px;
@@ -187,29 +337,17 @@ footer .foot-1 {
     font-size: medium;
 }
 
-.package{
-    display: flex;
-}
-
-.pack-item{
-    height: 200px;
-    width: 100%;
-    border: 1px solid;
-    margin: 18px;
-}
-
-.btn-call{
-    text-align: center;
-}
-
-
-.btn-call>button{
-    background-color: var(--side-nav);
-    color: var(--text-color);
-    text-align: center;
-    margin: 20px;
-    padding: 20px;
-    width: 200px;
-    font-size: medium;
-    border-radius: 4px;
+/* Responsive */
+@media screen and (max-width:1200px) {
+    .cards{
+        grid-template-columns: repeat(2,1fr);
+    }  
+}@media screen and (max-width:900px) {
+    .cards{
+        grid-template-columns: repeat(1,1fr);
+    } 
+    
+    h1{
+        font-size: 3.5rem;
+    }
 }
